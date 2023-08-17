@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html 
+data-theme="light"
+ lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Money Masters</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        input{
+            background: #DCDCDC;
+        }
+        .btn-pri{
+            padding: 15px 50px;
+            background: #59A5FF;
+            font-size: 20px;
+            font-weight: 700px;
+        }
+        
+    </style>
+
+  </head>
+  <body>
+    <main>
+      <h1 class="text-5xl text-center font-bold my-4">Money Masters</h1>
+      <!-- container -->
+      <div class="flex justify-around w-[1440px] mx-auto">
+        <img class="h-[650px]" src="./images/photo.jpg" alt="" />
+        <div class="bg-gray-100 text-center w-[500px]">
+            <h3 class="text-xl font-semibold  mt-10">Income</h3>
+            <span class="text-left">Income:</span> 
+            <input class="w-[220px] my-2 pl-4" type="number" name="" id="income">
+            <h3 class="text-xl font-semibold">Expenses</h3>
+            <span class="text-left">Food:</span> 
+            <input class="w-[220px] my-2 pl-4" type="number" name="" id="food"> <br>
+            <span class="text-left">Rent:</span> 
+            <input class="w-[220px] my-2 pl-4" type="number" name="" id="rent"> <br>
+            <span class="text-left">Clothes:</span> 
+            <input class="w-[220px] my-2 pl-4" type="number" name="" id="clothes"> <br>
+            <button onclick="calculateExpenses()" class="btn btn-pri my-5">Calculate</button>
+            <h3 class="text-xl font-semibold pt-4">Total Expenses: <span id="total-expenses">00</span> </h3>
+            <h3 class="text-xl font-semibold pt-4 pb-8">Balance: <span id="balance-left">00</span></h3>
+            <span class="text-left">Save:</span>
+            <input type="number" class="text-lg pl-4 w-32" id="percentage"> <span>%</span> 
+            <button onclick="calculateSavingPercentage()" class="btn btn-primary btn-sm bg-[#59A5FF] border-none text-black ml-4">Save</button>
+            <h3 class="text-xl font-semibold py-4">Saving Amount: <span id="saving-amount">00</span> </h3>
+            <h3 class="text-xl font-semibold py-4">Remaining Balance: <span id="remaining-amount">00</span> </h3>
+            <button onclick="clearField()" class="btn btn-pri my-5">Clear</button>
+
+        </div>
+      </div>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
